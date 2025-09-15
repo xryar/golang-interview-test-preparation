@@ -1,17 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
-func main() {
-	for i := 1; i <= 50; i++ {
-		if i%3 == 0 {
-			fmt.Println("Fizz")
+func FizzBuzz(s int) []string {
+	var result []string
+	for i := 1; i <= s; i++ {
+		if i%3 == 0 && i%5 == 0 {
+			result = append(result, "FizzBuzz")
+		} else if i%3 == 0 {
+			result = append(result, "Fizz")
 		} else if i%5 == 0 {
-			fmt.Println("Buzz")
-		} else if i%3 == 0 && i%5 == 0 {
-			fmt.Println("FizzBuzz")
+			result = append(result, "Buzz")
 		} else {
-			fmt.Println(i)
+			result = append(result, strconv.Itoa(i))
 		}
 	}
+
+	return result
+}
+
+func main() {
+	fmt.Println(FizzBuzz(50))
 }
