@@ -53,4 +53,7 @@ func main() {
 
 	nums = []int{2, 3, 7, 1, 8, 12, 20}
 	fmt.Println(findMissing(nums, 12))
+
+	nums = []int{4, 6, 7, 9}
+	fmt.Println(findMissing(nums, 10))
 }
