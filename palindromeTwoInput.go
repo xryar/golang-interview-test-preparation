@@ -31,6 +31,24 @@ func isPalindromeTwoInput(input interface{}) bool {
 	return true
 }
 
+// palindrome but generics
+func isPalindromeGenerics[T ~string | ~int](input T) bool {
+	s := fmt.Sprint(input)
+
+	i := 0
+	j := len(s) - 1
+
+	for i < j {
+		if s[i] != s[j] {
+			return false
+		}
+		i++
+		j--
+	}
+
+	return true
+}
+
 func main() {
 	fmt.Println(isPalindromeTwoInput(121))
 	fmt.Println(isPalindromeTwoInput("aba"))
