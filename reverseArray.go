@@ -14,7 +14,7 @@ func reverseArray(nums []int) {
 }
 
 func main() {
-	arr := []int{1, 2, 3, 5}
+	arr := []int{1, 3, 2, 4, 5}
 	reverseArray(arr)
 	fmt.Println(arr)
 }
